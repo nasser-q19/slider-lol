@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/iceland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 4s linear;
+    animation: bAnimation 10s linear infinite;
+    overflow: hidden; /* لمنع ظهور الصور خارج الـ container */
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+
+.head .logo h1 {
+    font-family: "Arial";
+    color: #fff;
+}
+
+.head .list ul {
+    list-style: none;
+}
+
+.head .list ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.head .list ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+}
+
+.description span {
+    color: orangered;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.description h1 {
+    font-size: 55px;
+}
+
+.description p {
+    max-width: 100%;
+    width: 500px;
+    line-height: 1.5;
+}
+
+.img-slider {
+    width: 430px;
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-30%);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 4s linear;
+    animation: imganime 11s linear infinite;
+    position: relative;
+}
+
+.img-container img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* إضافة ظل للصور */
+}
+
+
+@keyframes imganime {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-220px);
+    }
+    50% {
+        transform: translateX(-440px);
+    }
+    75% {
+        transform: translateX(-650px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bAnimation {
+    0%, 100% {
+        background-image: url(images/castelmezzano.jpg);
+    }
+    25% {
+        background-image: url(images/mountains-862870.jpg);
+    }
+    50% {
+        background-image: url(images/iceland.jpg);
+    }
+    75% {
+        background-image: url(images/snow-3193865.jpg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
